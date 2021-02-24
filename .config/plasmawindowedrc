@@ -1,0 +1,9 @@
+[Applets][3]
+immutability=1
+plugin=org.kde.plasma.notes
+
+[Applets][3][Configuration]
+geometry=56,26,160,160
+
+[Applets][3][Configuration][General]
+noteId=3e7cb1c4-1066-4008-8808-2ef1520187

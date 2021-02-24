@@ -1,0 +1,13 @@
+[/home/wmatex/.vaults/Passwords.enc]
+activities=
+backend=cryfs
+lastStatus=2
+mountPoint=/home/wmatex/Vaults/Passwords
+name=Passwords
+offlineOnly=false
+
+[EncryptedDevices]
+/home/wmatex/.vaults/Passwords.enc=true
+
+[UI-notice]
+SkipNotice-cryfs-message=false

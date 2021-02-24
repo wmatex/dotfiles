@@ -1,0 +1,134 @@
+[ActionsWidget]
+ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdMAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAAA2QAAAAEAAAAAAAAD6AAAAABk
+
+[Audio Preview Settings]
+Autoplay=false
+
+[ConfigDialog]
+Height 1080=533
+Width 1920=610
+
+[Containments][112][General]
+AppletOrder=109
+
+[Containments][116][General]
+AppletOrder=117;121;124;120
+
+[Containments][125][General]
+AppletOrder=126
+
+[Containments][127][General]
+AppletOrder=128
+
+[DownloadDialog Settings]
+Height 1080=459
+Width 1920=700
+
+[FileDialogSize]
+Height 1080=480
+Width 1920=640
+eDP-1 Height 1080=480
+eDP-1 Height 1920x1080=818
+eDP-1 Width 1920=640
+eDP-1 Width 1920x1080=1073
+
+[General]
+Number of Actions=0
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Pictures/DSC_0809.JPG,file:$HOME/Pictures/Wallpapers/2/Colors.png,file:$HOME/goat.mp3,file:$HOME/.cat_installer/ca.pem,file:$HOME/Pictures/Wallpapers/2/alena-aenami-sunset2k.jpg,file:$HOME/.icons/Faenza/places/scalable/distributor-logo-gentoo.svg,file:$HOME/.icons/Faenza/places/scalable/distributor-logo.svg,file:$HOME/Pictures/Coding_Programming_code_tech_computer_letters_words_symbols_numbers_screen_monitor_1366x768.jpg,file:$HOME/Pictures/wallpaper.jpg
+Recent URLs[$e]=file:$HOME/.icons/Faenza/places/scalable/,file:$HOME/.icons/Faenza/places/,file:$HOME/Downloads/,file:$HOME/Pictures/Wallpapers/2/,file:$HOME/.cat_installer/,file:///tmp/,file:$HOME/,file:$HOME/Pictures/Wallpapers/
+detailViewIconSize=16
+
+[KPropertiesDialog]
+Height 1080=488
+Width 1920=439
+
+[PlasmaRunnerManager]
+LaunchCounts=1 services_torcs-torcs.desktop,1 services_screenlocker.desktop,1 services_org.gnome.Calendar.desktop,1 services_kcm_printer_manager.desktop,1 services_kcm_pulseaudio.desktop,2 services_org.gnome.Nautilus.desktop,2 services_keys.desktop,10 services_chrome-madonfdbkfpahbdmdbpihndkpfojknld-Default.desktop,20 services_virtualbox.desktop,3 services_org.kde.spectacle.desktop,1 services_gcolor2-gcolor2.desktop,1 services_kde4-amarok.desktop,2 services_deluge.desktop,1 services_kcm_energyinfo.desktop,11 services_slack.desktop,1 services_avocode.desktop,1 shell_poweroff,4 services_chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default.desktop,1 services_skype.desktop,1 services_matlab2014b.desktop,1 services_applications:kcm_keys.desktop,1 services_bluedeviladapters.desktop,1 services_org.kde.Help.desktop,1 services_org.gnome.SoundRecorder.desktop,4 services_gvim.desktop,1 shell_autorotate.sh,2 services_org.kde.konsole.desktop,25 services_google-chrome.desktop,1 services_klavaro.desktop,2 services_steam.desktop,13 services_chrome-kobpghbkakfcdeibligocnkhbhgplgjm-Default.desktop,14 services_jetbrains-phpstorm.desktop,1 services_componentchooser.desktop,1 services_autostart.desktop,13 services_firefox.desktop,2 services_rhythmbox.desktop,2 services_gnome-mines.desktop,1 services_about-distro.desktop,9 shell_slack,3 services_zzz-gimp.desktop,1 services_org.kde.klipper.desktop,1 services_org.kde.ktorrent.desktop,1 services_filezilla.desktop,3 services_org.kde.dolphin.desktop,2 services_spotify.desktop,1 services_kcm_kscreen.desktop,3 services_org.kde.kwrite.desktop,5 services_kcm_kdeconnect.desktop,1 services_kde4-okular.desktop,1 shell_baobab,2 services_systemsettings.desktop,3 services_idea-community-idea-community.desktop,1 services_kcmnotify.desktop,1 services_terminator.desktop,1 places_trash:/,1 services_kcmtrash.desktop,1 services_applications:kcm_kscreen.desktop,1 services_jetbrains-pycharm.desktop,5 services_atom.desktop,3 services_xsane.desktop
+pluginWhiteList=desktopsessions,services,places,PowerDevil,calculator,unitconverter,shell,bookmarks,recentdocuments,locations,baloosearch
+
+[PlasmaViews][Panel 1]
+alignment=1
+
+[PlasmaViews][Panel 1][Defaults]
+minLength=1920
+thickness=24
+
+[PlasmaViews][Panel 1][Horizontal1920]
+length=2381
+minLength=1920
+thickness=24
+
+[PlasmaViews][Panel 1][Vertical1024]
+thickness=30
+
+[PlasmaViews][Panel 1][Vertical1050]
+length=616
+thickness=30
+
+[PlasmaViews][Panel 1][Vertical1080]
+alignment=1
+length=526
+minLength=1079
+panelVisibility=0
+thickness=38
+
+[PlasmaViews][Panel 1][Vertical1200]
+thickness=30
+
+[PlasmaViews][Panel 1][Vertical1400]
+length=616
+thickness=30
+
+[PlasmaViews][Panel 1][Vertical1920]
+length=356
+thickness=30
+
+[PlasmaViews][Panel 1][Vertical2160]
+thickness=30
+
+[PlasmaViews][Panel 1][Vertical480]
+thickness=30
+
+[PlasmaViews][Panel 1][Vertical600]
+thickness=30
+
+[PlasmaViews][Panel 1][Vertical768]
+thickness=30
+
+[PlasmaViews][Panel 1][Vertical960]
+thickness=30
+
+[PlasmaViews][Panel 112][Horizontal1920]
+alignment=132
+maxLength=1920
+minLength=116
+offset=0
+panelVisibility=1
+thickness=88
+
+[PlasmaViews][Panel 116][Horizontal1920]
+thickness=36
+
+[PlasmaViews][Panel 116][Vertical1080]
+alignment=1
+panelVisibility=0
+thickness=282
+
+[PlasmaViews][Panel 125][Horizontal1920]
+thickness=27
+
+[PlasmaViews][Panel 127][Horizontal1920]
+thickness=27
+
+[ScreenConnectors]
+0=eDP-1
+1=HDMI1
+2=HDMI-2
+3=HDMI-1
+4=:0.0
+5=Screen32
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/maintain_existing_desktop_icon_sizes.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/systemloadviewer_systemmonitor.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/containmentactions_middlebutton.js
