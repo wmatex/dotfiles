@@ -1,0 +1,38 @@
+#!/bin/bash
+
+wid=$1
+class=$2
+instance=$3
+consequences=$4
+
+#echo $@ >> /tmp/rules
+#xprop -id $wid >> /tmp/rules
+
+name=$(xprop -id $wid WM_NAME)
+echo "$class: $name" >> /tmp/slack_rules
+echo $name | grep "Slack | Slack call with" >> /tmp/slack_rules
+
+case "$class" in
+    ([Ss]lack)
+        echo "Matched slack" >> /tmp/slack_rules
+        if xprop -id $wid WM_NAME | grep "Slack | Slack call with" > /dev/null; then
+            echo "Sticky=off" >> /tmp/slack_rules
+            echo sticky=off
+        fi
+        ;;
+
+esac
+
+type=$(xprop -id $wid _NET_WM_WINDOW_TYPE | grep -E "_NET_WM_WINDOW_TYPE\(ATOM\) = " | cut -d "=" -f 2)
+
+if [[ $type =~ "_NET_WM_WINDOW_TYPE_NOTIFICATION" ]]; then
+
+    if [[ $type =~ "_KDE_NET_WM_WINDOW_TYPE_ON_SCREEN_DISPLAY" ]]; then
+        echo border=off state=floating sticky=on center=off manage=on private=on focus=off rectangle=300x60+810+800
+    else
+        echo border=off center=off state=floating sticky=on focus=off
+    fi
+elif [[ $type =~ "_NET_WM_WINDOW_TYPE_DIALOG" ]]; then
+    echo border=off center=off state=floating private=on
+fi
+

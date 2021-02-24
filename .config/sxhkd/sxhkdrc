@@ -1,0 +1,109 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	konsole
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + r
+	bspc wm -r
+
+# logout dialog
+super + shift + e
+    qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+
+# close and kill
+super + shift + q
+	bspc node -c
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# focus the node for the given path jump
+super + comma
+	bspc node -f @parent
+
+#
+# move/resize
+#
+
+
+# show krunner
+alt + space
+    qdbus org.kde.krunner /App display
+
+super + {s,p}
+    /home/wmatex/.local/bin/bspwm_scratchpad {Slack "Slack \|",Spotify}
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,shift + f,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+alt + {_,shift + ,ctrl + }{h,j,k,l}
+	bspc node -{f,s,n} {west,south,north,east}
+
+# focus the next/previous window in the current desktop
+alt + {_,shift + }Tab
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# focus to next/prev desktop
+super + {h,l}
+    bspc desktop -f {prev,next}.occupied
+super + shift + {h,l}
+    bspc desktop -f {prev,next}.!occupied
+
+super + BackSpace
+    bspc desktop -f last
+
+#
+# preselect
+#
+
+# preselect the direction
+super + alt + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
