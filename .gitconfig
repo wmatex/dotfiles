@@ -1,0 +1,23 @@
+[user]
+	name = Matej Vavrinec
+	email = wmatex@gmail.com
+[push]
+	default = simple
+[merge]
+	tool = kdiff3
+[core]
+	editor = nvim
+	pager = less -F -X
+	autocrlf = input
+	whitespace = blank-at-eol,blank-at-eof,space-before-tab,tab-in-indent
+[color]
+	ui = true
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=default
+    costlocker = log --stat --all --author=Matej --no-merges
+[pull]
+	rebase = false
+[diff]
+	context = 6
+[init]
+	defaultBranch = master
