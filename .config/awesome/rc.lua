@@ -15,7 +15,7 @@ local awful         = require("awful")
                       --require("awful.permissions")
 local beautiful     = require("beautiful")
 --local wibox         = require("wibox")
---local naughty       = require("naughty")
+local naughty       = require("naughty")
 local lain          = require("lain")
 --local menubar       = require("menubar")
 local freedesktop   = require("freedesktop")
@@ -32,6 +32,19 @@ if awesome.startup_errors then
                      title = "Oops, there were errors during startup!",
                      text = awesome.startup_errors })
 end
+
+--naughty.config.defaults.border_width = 0
+--naughty.config.defaults.margin = 16
+--naughty.config.defaults.shape = helpers.rrect(6)
+--naughty.config.defaults.text = "Boo!"
+naughty.config.defaults.timeout = 10
+naughty.config.padding = dpi(8)
+--naughty.config.presets.critical.bg = "#FE634E"
+--naughty.config.presets.critical.fg = "#fefefa"
+--naughty.config.presets.low.bg = "#1771F1"
+--naughty.config.presets.normal.bg = "#1771F1"
+--naughty.config.defaults.icon_size = 64
+naughty.config.spacing = dpi(8)
 
 
 -- Handle runtime errors after startup
@@ -188,7 +201,13 @@ globalkeys = gears.table.join(
     ),
     awful.key({ altkey,         }, "space",
         function()
-            awful.spawn("qdbus org.kde.krunner /App display", false)
+            --awful.spawn("qdbus org.kde.krunner /App display", false)
+            awful.spawn("rofi -show drun", false)
+        end
+    ),
+    awful.key({ altkey, "Shift" }, "space",
+        function()
+            awful.spawn("rofi -show calc -modi calc -no-show-match -no-sort", false)
         end
     ),
     -- Tag browsing
@@ -444,6 +463,12 @@ root.keys(globalkeys)
 -- }}}
 
 -- {{{ Rules
+
+clientbuttons_jetbrains = gears.table.join(
+    awful.button({ modkey }, 1, awful.mouse.client.move),
+    awful.button({ modkey }, 3, awful.mouse.client.resize)
+)
+
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
     -- All clients will match this rule.
@@ -501,10 +526,16 @@ awful.rules.rules = {
           properties = { floating = true, sticky = true } },
 
     { rule = { class = "Spotify" },
-          properties = { floating = true, sticky = true } },
+        properties = { floating = true, sticky = true } },
 
     { rule = { class = "Slack", name = "Slack | Slack call with " },
-          properties = { floating = true, sticky = false } },
+        properties = { floating = true, sticky = false } },
+
+    -- JetBrains IDEs
+	{ rule = { class = "jetbrains-.*", }, 
+        properties = { focus = true, buttons = clientbuttons_jetbrains } },
+    { rule = { class = "jetbrains-.*", name = "win.*" }, 
+        properties = { titlebars_enabled = false, border_width = 0, focusable = false, focus = true, floating = true, placement = awful.placement.restore } }
 }
 -- }}}
 
