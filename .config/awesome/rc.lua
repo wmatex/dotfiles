@@ -15,7 +15,7 @@ local awful         = require("awful")
                       --require("awful.permissions")
 local beautiful     = require("beautiful")
 --local wibox         = require("wibox")
-local naughty       = require("naughty")
+--local naughty       = require("naughty")
 local lain          = require("lain")
 --local menubar       = require("menubar")
 local freedesktop   = require("freedesktop")
@@ -33,18 +33,20 @@ if awesome.startup_errors then
                      text = awesome.startup_errors })
 end
 
---naughty.config.defaults.border_width = 0
---naughty.config.defaults.margin = 16
---naughty.config.defaults.shape = helpers.rrect(6)
---naughty.config.defaults.text = "Boo!"
-naughty.config.defaults.timeout = 10
-naughty.config.padding = dpi(8)
---naughty.config.presets.critical.bg = "#FE634E"
---naughty.config.presets.critical.fg = "#fefefa"
---naughty.config.presets.low.bg = "#1771F1"
---naughty.config.presets.normal.bg = "#1771F1"
---naughty.config.defaults.icon_size = 64
-naughty.config.spacing = dpi(8)
+if naughty then
+    --naughty.config.defaults.border_width = 0
+    --naughty.config.defaults.margin = 16
+    --naughty.config.defaults.shape = helpers.rrect(6)
+    --naughty.config.defaults.text = "Boo!"
+    naughty.config.defaults.timeout = 10
+    naughty.config.padding = dpi(8)
+    --naughty.config.presets.critical.bg = "#FE634E"
+    --naughty.config.presets.critical.fg = "#fefefa"
+    --naughty.config.presets.low.bg = "#1771F1"
+    --naughty.config.presets.normal.bg = "#1771F1"
+    --naughty.config.defaults.icon_size = 64
+    naughty.config.spacing = dpi(8)
+end
 
 
 -- Handle runtime errors after startup
@@ -202,7 +204,7 @@ globalkeys = gears.table.join(
     awful.key({ altkey,         }, "space",
         function()
             --awful.spawn("qdbus org.kde.krunner /App display", false)
-            awful.spawn("rofi -show drun", false)
+            awful.spawn("rofi -show combi", false)
         end
     ),
     awful.key({ altkey, "Shift" }, "space",

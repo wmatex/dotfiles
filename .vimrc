@@ -226,7 +226,7 @@ let g:EclimCompletionMethod = 'omnifunc'
 " Mark folds
 set foldmethod=marker
 " Unfold all by default
-set foldlevel=99
+set foldlevel=98
 
 " Delete trailing whitespace
 au FileType c,cpp,java,php au BufWritePre <buffer> :%s/\s\+$//e
